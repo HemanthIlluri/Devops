@@ -4,3 +4,6 @@ x=1+2
 
 #Subtraction
 
+#Multiply
+
+#Percentage
