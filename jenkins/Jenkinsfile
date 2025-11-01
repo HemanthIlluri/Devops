@@ -14,14 +14,14 @@ pipeline {
         stage("Build"){
             steps{
                 dir("Devops"){
-		    sh"mv clean install"
+                    sh"mvn clean install"	        
 		}
             }
         }
         stage("Test"){
             steps{
                 dir("Devops"){
-                    sh" test"  
+                    sh"test"  
                 }
             }
         }
