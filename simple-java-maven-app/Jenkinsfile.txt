@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+    stages {
+        stage("Clean Up"){
+            steps{
+                deleteDir()
+            }
+        }
+        stage("Clone Repo"){
+            steps{
+                sh " git clone https://github.com/HemanthIlluri/Devops.git"
+            }
+        }
+        stage("Build"){
+            steps{
+                c
+            }
+        }
+        stage("Test"){
+            steps{
+                dir("simple-java-maven-app"){
+                    sh" test"  
+                }
+            }
+        }
+    }
+}
