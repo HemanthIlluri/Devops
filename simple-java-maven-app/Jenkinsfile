@@ -13,7 +13,9 @@ pipeline {
         }
         stage("Build"){
             steps{
-                c
+                dir("Devops"){
+		    sh"mv clean install"
+		}
             }
         }
         stage("Test"){
